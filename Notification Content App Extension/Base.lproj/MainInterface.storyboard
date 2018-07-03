@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14269.14" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="M4Y-Lb-cyx">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14252.5"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Notification View Controller-->
+        <scene sceneID="cwh-vc-ff4">
+            <objects>
+                <viewController id="M4Y-Lb-cyx" userLabel="Notification View Controller" customClass="NotificationViewController" customModule="Notification_Content_App_Extension" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" simulatedAppContext="notificationCenter" id="S3S-Oj-5AN">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="37"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="infoIcon" translatesAutoresizingMaskIntoConstraints="NO" id="qEm-ai-xhh">
+                                <rect key="frame" x="16" y="3" width="30" height="30"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mRH-ab-4o9">
+                                <rect key="frame" x="139.5" y="3" width="41" height="30"/>
+                                <state key="normal" title="Cover"/>
+                                <connections>
+                                    <action selector="coverButtonTapped:" destination="M4Y-Lb-cyx" eventType="touchUpInside" id="tJj-7F-lnV"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Your overdraft was covered!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cok-wj-qkz">
+                                <rect key="frame" x="54" y="8" width="250" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="qEm-ai-xhh" firstAttribute="top" secondItem="2BE-c3-nQJ" secondAttribute="top" constant="3" id="D3H-Mb-q6B"/>
+                            <constraint firstItem="qEm-ai-xhh" firstAttribute="leading" secondItem="2BE-c3-nQJ" secondAttribute="leading" constant="16" id="HSb-aZ-nUc"/>
+                            <constraint firstItem="cok-wj-qkz" firstAttribute="leading" secondItem="qEm-ai-xhh" secondAttribute="trailing" constant="8" id="I86-3h-Vzs"/>
+                            <constraint firstItem="2BE-c3-nQJ" firstAttribute="bottom" secondItem="cok-wj-qkz" secondAttribute="bottom" constant="8" id="KHg-Rs-AbL"/>
+                            <constraint firstItem="mRH-ab-4o9" firstAttribute="top" secondItem="2BE-c3-nQJ" secondAttribute="top" constant="3" id="akc-R2-U9S"/>
+                            <constraint firstItem="cok-wj-qkz" firstAttribute="top" secondItem="2BE-c3-nQJ" secondAttribute="top" constant="8" id="b9H-1f-ChD"/>
+                            <constraint firstItem="mRH-ab-4o9" firstAttribute="centerX" secondItem="S3S-Oj-5AN" secondAttribute="centerX" id="wjO-F7-vab"/>
+                            <constraint firstItem="2BE-c3-nQJ" firstAttribute="trailing" secondItem="cok-wj-qkz" secondAttribute="trailing" constant="16" id="zJl-Ur-81F"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="2BE-c3-nQJ"/>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="37"/>
+                    <connections>
+                        <outlet property="clearedTransactionLabel" destination="cok-wj-qkz" id="Zbe-9i-IBR"/>
+                        <outlet property="coverButton" destination="mRH-ab-4o9" id="hcd-Bg-2tf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vXp-U4-Rya" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.59999999999999" y="119.1904047976012"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="infoIcon" width="30" height="30"/>
+    </resources>
+</document>
